@@ -1,7 +1,18 @@
 <mat-toolbar>
   <span>Wige-Dev</span>
   <span class="spacer"></span>
-  <button mat-icon-button>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      Home
+    </button>
+    <button mat-menu-item>
+      Downloads
+    </button>
+    <button mat-menu-item>
+      Contact Us
+    </button>
+  </mat-menu>
 </mat-toolbar>
