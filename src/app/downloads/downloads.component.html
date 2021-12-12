@@ -1,19 +1,22 @@
-<div>
+<div fxLayout="column" fxLayoutAlign="start center">
   <h1>Downloads</h1>
 
-  <input mat-input>
+  <mat-form-field>
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput type="search" placeholder="search downloads..." class="search-input">
+  </mat-form-field>
 
   <mat-card>
     <dl>
       <dt>
-        Item 1
+        <a href="https://wige-dev.com">Item 1</a>
       </dt>
       <dd>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua.
       </dd>
       <dt>
-        Item 2
+        <a href="https://wige-dev.com">Item 2</a>
       </dt>
       <dd>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
