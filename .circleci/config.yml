@@ -25,7 +25,7 @@ jobs:
 
       - run:
           name: Tar && Gzip compiled app
-          command: tar zcf dist.tar.gz dist/local-weather-app
+          command: tar zcf dist.tar.gz dist/Wige-Dev
       - store_artifacts:
           path: dist.tar.gz
 workflows:
