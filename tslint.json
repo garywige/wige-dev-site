@@ -1,6 +1,5 @@
 {
   "extends": [
-    null,
     "tslint-etc",
     "tslint-config-prettier",
     "tslint-plugin-prettier"
