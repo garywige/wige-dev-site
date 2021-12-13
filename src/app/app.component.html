@@ -5,10 +5,10 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
+    <button mat-menu-item [routerLink]="['']">
       Home
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item [routerLink]="['/downloads']">
       Downloads
     </button>
     <button mat-menu-item>
@@ -22,5 +22,5 @@
   </div>
 </div>
 <div>
-  <app-home></app-home>
+  <router-outlet></router-outlet>
 </div>

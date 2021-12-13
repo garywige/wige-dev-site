@@ -1,0 +1,20 @@
+<div fxLayout="column" fxLayoutAlign="start center">
+  <h1>Downloads</h1>
+
+  <mat-form-field>
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput type="search" placeholder="search downloads..." class="search-input"
+      [ngModel]="search" (ngModelChange)="search = $event">
+  </mat-form-field>
+
+  <mat-card>
+    <dl>
+      <ng-container *ngFor="let download of downloads">
+        <div *ngIf="download.name.toLowerCase().includes(search.toLowerCase())">
+          <dt><a [href]="download.url">{{download.name}}</a></dt>
+          <dd>{{download.description}}</dd>
+        </div>
+      </ng-container>
+    </dl>
+  </mat-card>
+</div>
