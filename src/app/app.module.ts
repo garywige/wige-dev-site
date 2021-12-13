@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { DownloadsComponent } from './downloads/downloads.component'
 import { HomeComponent } from './home/home.component'
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './material/material.module'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, DownloadsComponent],
@@ -18,7 +18,7 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,7 +3,7 @@ export class Download {
   url: string
   description: string
 
-  constructor(){
+  constructor() {
     this.name = ''
     this.url = ''
     this.description = ''
