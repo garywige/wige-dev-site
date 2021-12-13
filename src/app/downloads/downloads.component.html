@@ -3,14 +3,17 @@
 
   <mat-form-field>
     <mat-icon matPrefix>search</mat-icon>
-    <input matInput type="search" placeholder="search downloads..." class="search-input">
+    <input matInput type="search" placeholder="search downloads..." class="search-input"
+    [ngModel]="search" (ngModelChange)="search = $event">
   </mat-form-field>
 
   <mat-card>
     <dl>
       <ng-container *ngFor="let download of downloads">
-        <dt><a [href]="download.url">{{download.name}}</a></dt>
-        <dd>{{download.description}}</dd>
+        <div *ngIf="download.name.includes(search)">
+          <dt><a [href]="download.url">{{download.name}}</a></dt>
+          <dd>{{download.description}}</dd>
+        </div>
       </ng-container>
     </dl>
   </mat-card>
