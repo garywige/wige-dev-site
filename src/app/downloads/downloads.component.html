@@ -10,7 +10,7 @@
   <mat-card>
     <dl>
       <ng-container *ngFor="let download of downloads">
-        <div *ngIf="download.name.includes(search)">
+        <div *ngIf="download.name.toLowerCase().includes(search.toLowerCase())">
           <dt><a [href]="download.url">{{download.name}}</a></dt>
           <dd>{{download.description}}</dd>
         </div>
