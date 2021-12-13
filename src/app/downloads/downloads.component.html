@@ -8,20 +8,10 @@
 
   <mat-card>
     <dl>
-      <dt>
-        <a href="https://wige-dev.com">Item 1</a>
-      </dt>
-      <dd>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.
-      </dd>
-      <dt>
-        <a href="https://wige-dev.com">Item 2</a>
-      </dt>
-      <dd>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.
-      </dd>
+      <ng-container *ngFor="let download of downloads">
+        <dt><a [href]="download.url">{{download.name}}</a></dt>
+        <dd>{{download.description}}</dd>
+      </ng-container>
     </dl>
   </mat-card>
 </div>
