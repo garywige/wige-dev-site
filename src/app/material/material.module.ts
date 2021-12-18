@@ -12,7 +12,7 @@ let modules = [
   MatMenuModule,
   MatCardModule,
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
 ]
 
 @NgModule({
