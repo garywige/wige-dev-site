@@ -5,23 +5,28 @@
     <div>
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <input matInput formControlName="email">
+        <input matInput formControlName="email" required>
+        <mat-error>must be a valid email address</mat-error>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
         <mat-label>Subject</mat-label>
-        <input matInput formControlName="subject">
+        <input matInput formControlName="subject" required>
+        <mat-error>must be more than 2 characters</mat-error>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
         <mat-label>Message</mat-label>
-        <textarea matInput formControlName="message" style="height: 4em;"></textarea>
+        <textarea matInput formControlName="message" style="height: 4em;"
+          required></textarea>
+        <mat-error>must be more than 10 characters</mat-error>
       </mat-form-field>
     </div>
     <div>
-      <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+      <button mat-raised-button color="accent" (click)="onSubmit()"
+        [disabled]="form.invalid">Submit</button>
     </div>
     <div>
       <button mat-button (click)="onCancel()">Cancel</button>
