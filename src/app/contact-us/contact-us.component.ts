@@ -27,4 +27,9 @@ export class ContactUsComponent implements OnInit {
       message: '',
     })
   }
+
+  onSubmit() {
+    // this appears to require a backend web API
+    throw Error('not implemented')
+  }
 }
