@@ -6,3 +6,7 @@ dt {
 dd {
   margin-bottom: 1em;
 }
+
+.minheight {
+  min-height: 200px;
+}
