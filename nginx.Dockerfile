@@ -1,5 +1,5 @@
-FROM duluca/minimal-nginx-web-server:l-alpine
+FROM duluca/minimal-nginx-web-server:1-alpine
 
-COPY dist/wige-dev-site /var/www
+COPY dist/Wige-Dev /var/www
 
 CMD 'nginx'
