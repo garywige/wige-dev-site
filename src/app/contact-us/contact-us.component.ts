@@ -39,7 +39,7 @@ export class ContactUsComponent implements OnInit {
       email: this.form.get('email')?.value,
       subject: this.form.get('subject')?.value,
       message: this.form.get('message')?.value,
-    }
+    } as IContactUsForm
 
     const url = 'http://localhost:3000/v1/contactus'
     this.http.post(url, data).subscribe((result) => {
