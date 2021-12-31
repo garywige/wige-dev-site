@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http'
 import { Component, OnInit } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
+
+import { IContactUsForm } from './contact-us-form'
 
 @Component({
   selector: 'app-contact-us',
@@ -9,8 +12,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'
 export class ContactUsComponent implements OnInit {
   form: FormGroup
   output: string
+  isSubmitted: boolean
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.form = new FormGroup({
       email: new FormControl('', Validators.pattern(/^(.)+@(.)+\.(.)+$/)),
       subject: new FormControl('', Validators.minLength(2)),
@@ -18,6 +22,8 @@ export class ContactUsComponent implements OnInit {
     })
 
     this.output = ''
+
+    this.isSubmitted = false
   }
 
   ngOnInit(): void {}
@@ -32,23 +38,28 @@ export class ContactUsComponent implements OnInit {
   }
 
   onSubmit() {
-    throw Error('not implemented')
-    /*
-    this.mailService.setApiKey(SendGrid.apiKey)
-
-    const message = {
-      to: 'gary@wige-dev.com',
-      from: 'gary@wige-dev.com',
+    const data = {
+      email: this.form.get('email')?.value,
       subject: this.form.get('subject')?.value,
-      text: `${this.form.get('email')?.value}: ${this.form.get('message')?.value}`,
-    }
+      message: this.form.get('message')?.value,
+    } as IContactUsForm
 
-    this.mailService.send(message).then(() => {
-      // need to redirect user to thank you page
-      // OR i can just display a message at the bottom and reset the form?
-      this.form.reset()
-      this.output = 'Thank you! Your message has been sent!'
+    const url = 'http://localhost:3000/v1/contactus'
+    this.http.post<IContactUsForm>(url, data).subscribe((result) => {
+      if (result.email) {
+        // email was sent successfully
+        this.output = `
+          Success! Message with subject '${result.message}' was sent.
+        `
+      } else {
+        // there was an error
+        this.output = `
+          Error:
+          ${result.message}
+        `
+      }
     })
-    */
+
+    this.isSubmitted = true
   }
 }

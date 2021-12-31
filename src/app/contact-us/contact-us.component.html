@@ -1,7 +1,7 @@
 <div fxLayout="column" fxLayoutAlign="start center">
   <h1>Contact Us</h1>
 
-  <div [formGroup]="form">
+  <div [formGroup]="form" *ngIf="!isSubmitted">
     <div>
       <mat-form-field>
         <mat-label>Email</mat-label>
