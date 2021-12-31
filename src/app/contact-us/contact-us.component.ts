@@ -12,6 +12,7 @@ import { IContactUsForm } from './contact-us-form'
 export class ContactUsComponent implements OnInit {
   form: FormGroup
   output: string
+  isSubmitted: boolean
 
   constructor(private http: HttpClient) {
     this.form = new FormGroup({
@@ -21,6 +22,8 @@ export class ContactUsComponent implements OnInit {
     })
 
     this.output = ''
+
+    this.isSubmitted = false
   }
 
   ngOnInit(): void {}
@@ -46,10 +49,14 @@ export class ContactUsComponent implements OnInit {
       if (result.email) {
         // email was sent successfully
         this.output = `
-          The message was sent successfully!
-          Email address: ${result.email}
-          Subject: ${result.subject}
-          Message: ${result.message}
+          <h2>The message was sent successfully!<h2>
+          <div>
+          <ul>
+          <li>Email address: ${result.email}</li>
+          <li>Subject: ${result.subject}</li>
+          <li>Message: ${result.message}</li>
+          </ul>
+          </div>
         `
 
         this.form.patchValue({
@@ -60,10 +67,12 @@ export class ContactUsComponent implements OnInit {
       } else {
         // there was an error
         this.output = `
-          There was an error sending the message:
-          ${result.message}
+          <h2>There was an error sending the message</h2>
+          <p>${result.message}</p>
         `
       }
     })
+
+    this.isSubmitted = true
   }
 }
