@@ -49,14 +49,8 @@ export class ContactUsComponent implements OnInit {
       if (result.email) {
         // email was sent successfully
         this.output = `
-          Success! Message with subject '${result.message} was sent.'
+          Success! Message with subject '${result.message}' was sent.
         `
-
-        this.form.patchValue({
-          email: '',
-          subject: '',
-          message: '',
-        })
       } else {
         // there was an error
         this.output = `
