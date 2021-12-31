@@ -42,8 +42,28 @@ export class ContactUsComponent implements OnInit {
     } as IContactUsForm
 
     const url = 'http://localhost:3000/v1/contactus'
-    this.http.post(url, data).subscribe((result) => {
-      this.output = JSON.stringify(result)
+    this.http.post<IContactUsForm>(url, data).subscribe((result) => {
+      if (result.email) {
+        // email was sent successfully
+        this.output = `
+          The message was sent successfully!
+          Email address: ${result.email}
+          Subject: ${result.subject}
+          Message: ${result.message}
+        `
+
+        this.form.patchValue({
+          email: '',
+          subject: '',
+          message: '',
+        })
+      } else {
+        // there was an error
+        this.output = `
+          There was an error sending the message:
+          ${result.message}
+        `
+      }
     })
   }
 }
