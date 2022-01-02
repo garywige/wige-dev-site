@@ -91,9 +91,9 @@
     }
   },
   "config": {
-    "imageRepo": "[namespace]/[repository]",
-    "imageName": "custom_app_name",
-    "imagePort": "3000",
+    "imageRepo": "garywige/wige-dev-site",
+    "imageName": "wige-dev-site",
+    "imagePort": "8080",
     "internalContainerPort": "3000"
   }
 }
