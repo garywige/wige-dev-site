@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http'
 import { Component, OnInit } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { environment } from 'src/environments/environment'
 
 import { IContactUsForm } from './contact-us-form'
 
@@ -44,7 +45,7 @@ export class ContactUsComponent implements OnInit {
       message: this.form.get('message')?.value,
     } as IContactUsForm
 
-    const url = 'http://localhost:3000/v1/contactus'
+    const url = environment.api_url + '/v1/contactus'
     this.http.post<IContactUsForm>(url, data).subscribe((result) => {
       if (result.email) {
         // email was sent successfully
