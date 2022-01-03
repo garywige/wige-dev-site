@@ -18,16 +18,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy()
   })
 
-  it(`should have as title 'Wige-Dev'`, () => {
-    const fixture = TestBed.createComponent(AppComponent)
-    const app = fixture.componentInstance
-    expect(app.title).toEqual('Wige-Dev')
-  })
-
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent)
     fixture.detectChanges()
     const compiled = fixture.nativeElement as HTMLElement
-    expect(compiled.querySelector('.brand')?.textContent).toContain('Wige-Dev')
+    expect(compiled.querySelector('span.mat-display-1')?.textContent).toContain('WigeDev')
   })
 })
