@@ -9,6 +9,7 @@ import { Component } from '@angular/core'
         position: fixed;
         top: 0;
         z-index: 1;
+        box-shadow: 0 10px 20px #0008;
       }
     `,
   ],
