@@ -11,3 +11,8 @@ mat-form-field {
 .form-container {
   width: 90%;
 }
+
+.post-submission {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}

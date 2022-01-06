@@ -35,8 +35,8 @@
       <button mat-button (click)="onCancel()">Cancel</button>
     </div>
   </div>
-  <div>
-    <mat-spinner color="accent" *ngIf="isSubmitted && output === ''"></mat-spinner>
+  <div class="post-submission" *ngIf="isSubmitted">
+    <mat-spinner color="accent" *ngIf="output === ''"></mat-spinner>
     <p>{{output}}</p>
     <button mat-raised-button routerLink="/" color="accent"
       *ngIf="output !== ''">Home</button>
