@@ -5,7 +5,7 @@
     <div>
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <mat-icon>email</mat-icon>
+        <mat-icon matSuffix>email</mat-icon>
         <input matInput formControlName="email" required>
         <mat-error>must be a valid email address</mat-error>
       </mat-form-field>
@@ -13,7 +13,7 @@
     <div>
       <mat-form-field>
         <mat-label>Subject</mat-label>
-        <mat-icon>lightbulb</mat-icon>
+        <mat-icon matSuffix>lightbulb</mat-icon>
         <input matInput formControlName="subject" required>
         <mat-error>must be more than 2 characters</mat-error>
       </mat-form-field>
@@ -21,7 +21,7 @@
     <div>
       <mat-form-field>
         <mat-label>Message</mat-label>
-        <mat-icon>description</mat-icon>
+        <mat-icon matSuffix>description</mat-icon>
         <textarea matInput formControlName="message" style="height: 4em;"
           required></textarea>
         <mat-error>must be more than 10 characters</mat-error>
