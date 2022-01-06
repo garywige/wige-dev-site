@@ -8,6 +8,7 @@ import { Component } from '@angular/core'
       .fixed-bar {
         position: fixed;
         top: 0;
+        z-index: 1;
       }
     `,
   ],
