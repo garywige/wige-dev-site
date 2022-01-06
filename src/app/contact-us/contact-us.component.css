@@ -3,3 +3,11 @@ button {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+mat-form-field {
+  width: 100%;
+}
+
+.form-container {
+  width: 90%;
+}
