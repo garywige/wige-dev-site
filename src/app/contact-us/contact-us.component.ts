@@ -50,7 +50,7 @@ export class ContactUsComponent implements OnInit {
       if (result.email) {
         // email was sent successfully
         this.output = `
-          Success! Message with subject '${result.message}' was sent.
+          Message with subject '${result.message}' was sent. Have a nice day!
         `
       } else {
         // there was an error
