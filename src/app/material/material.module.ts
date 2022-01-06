@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
+import { MatDividerModule } from '@angular/material/divider'
 import {
   MAT_FORM_FIELD_DEFAULT_OPTIONS,
   MatFormFieldModule,
@@ -20,6 +21,7 @@ let modules = [
   MatButtonModule,
   MatProgressSpinnerModule,
   MatFormFieldModule,
+  MatDividerModule,
 ]
 
 @NgModule({
