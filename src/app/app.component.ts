@@ -11,6 +11,10 @@ import { Component } from '@angular/core'
         z-index: 1;
         box-shadow: 0 10px 20px #0008;
       }
+
+      .motto {
+        margin-top: 100px;
+      }
     `,
   ],
 })
