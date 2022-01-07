@@ -18,7 +18,7 @@ import { Component } from '@angular/core'
 
       .active-link {
         border-bottom: 1px solid white;
-        color: #88c;
+        color: #ff4081;
       }
     `,
   ],
