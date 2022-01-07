@@ -3,7 +3,8 @@
       alt="WigeDev"></button>
   <span class="spacer"></span>
   <span fxShow fxHide.lt-sm="true">
-    <button mat-button [routerLink]="['']" routerLinkActive="active-link">
+    <button mat-button [routerLink]="['']" routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{exact: true}">
       Home
     </button>
     <button mat-button [routerLink]="['/downloads']" routerLinkActive="active-link">
@@ -17,7 +18,8 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item [routerLink]="['']" routerLinkActive="active-link">
+    <button mat-menu-item [routerLink]="['']" routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{exact: true}">
       Home
     </button>
     <button mat-menu-item [routerLink]="['/downloads']" routerLinkActive="active-link">
