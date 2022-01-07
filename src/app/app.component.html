@@ -2,7 +2,18 @@
   <button mat-button routerLink="/"><img src="../assets/img/logo.png"
       alt="WigeDev"></button>
   <span class="spacer"></span>
-  <button mat-icon-button [matMenuTriggerFor]="menu">
+  <span fxShow fxHide.lt-sm="true">
+    <button mat-button [routerLink]="['']">
+      Home
+    </button>
+    <button mat-button [routerLink]="['/downloads']">
+      Downloads
+    </button>
+    <button mat-button [routerLink]="['/contact-us']">
+      Contact Us
+    </button>
+  </span>
+  <button mat-icon-button [matMenuTriggerFor]="menu" fxHide fxShow.lt-sm="true">
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
