@@ -15,6 +15,11 @@ import { Component } from '@angular/core'
       .motto {
         margin-top: 100px;
       }
+
+      .active-link {
+        border-bottom: 1px solid white;
+        color: #88c;
+      }
     `,
   ],
 })

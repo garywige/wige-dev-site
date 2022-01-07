@@ -3,13 +3,13 @@
       alt="WigeDev"></button>
   <span class="spacer"></span>
   <span fxShow fxHide.lt-sm="true">
-    <button mat-button [routerLink]="['']">
+    <button mat-button [routerLink]="['']" routerLinkActive="active-link">
       Home
     </button>
-    <button mat-button [routerLink]="['/downloads']">
+    <button mat-button [routerLink]="['/downloads']" routerLinkActive="active-link">
       Downloads
     </button>
-    <button mat-button [routerLink]="['/contact-us']">
+    <button mat-button [routerLink]="['/contact-us']" routerLinkActive="active-link">
       Contact Us
     </button>
   </span>
@@ -17,13 +17,13 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item [routerLink]="['']">
+    <button mat-menu-item [routerLink]="['']" routerLinkActive="active-link">
       Home
     </button>
-    <button mat-menu-item [routerLink]="['/downloads']">
+    <button mat-menu-item [routerLink]="['/downloads']" routerLinkActive="active-link">
       Downloads
     </button>
-    <button mat-menu-item [routerLink]="['/contact-us']">
+    <button mat-menu-item [routerLink]="['/contact-us']" routerLinkActive="active-link">
       Contact Us
     </button>
   </mat-menu>
