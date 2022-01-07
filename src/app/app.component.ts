@@ -13,7 +13,7 @@ import { Component } from '@angular/core'
       }
 
       .motto {
-        margin-top: 100px;
+        margin-top: 75px;
       }
 
       .active-link {
