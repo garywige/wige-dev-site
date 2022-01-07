@@ -1,24 +1,36 @@
-<mat-toolbar class="mat-primary" style="height: 100px">
-  <button mat-button routerLink="/"><img src="../assets/img/logo.png"
-      alt="WigeDev"></button>
+<mat-toolbar class="mat-primary fixed-bar">
+  <button mat-button routerLink="/"><span class="mat-display-1">WigeDev</span></button>
   <span class="spacer"></span>
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item [routerLink]="['']">
+  <span fxShow fxHide.lt-sm="true">
+    <button mat-button [routerLink]="['']" routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{exact: true}">
       Home
     </button>
-    <button mat-menu-item [routerLink]="['/downloads']">
+    <button mat-button [routerLink]="['/downloads']" routerLinkActive="active-link">
       Downloads
     </button>
-    <button mat-menu-item [routerLink]="['/contact-us']">
+    <button mat-button [routerLink]="['/contact-us']" routerLinkActive="active-link">
+      Contact Us
+    </button>
+  </span>
+  <button mat-icon-button [matMenuTriggerFor]="menu" fxHide fxShow.lt-sm="true">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" overlapTrigger="true">
+    <button mat-menu-item [routerLink]="['']" routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{exact: true}">
+      Home
+    </button>
+    <button mat-menu-item [routerLink]="['/downloads']" routerLinkActive="active-link">
+      Downloads
+    </button>
+    <button mat-menu-item [routerLink]="['/contact-us']" routerLinkActive="active-link">
       Contact Us
     </button>
   </mat-menu>
 </mat-toolbar>
 <div fxLayoutAlign="center">
-  <div>
+  <div class="motto mat-caption">
     App development for the modern era
   </div>
 </div>
@@ -27,6 +39,10 @@
 </div>
 <footer>
   <mat-toolbar class="mat-primary">
-    <span class="mat-caption">&copy; 2022 Gary Wige</span>
+    <span class="mat-caption">&copy; 2022 Wige Development Services, Inc.</span>
+    <span class="spacer"></span>
+    <a href="https://github.com/garywige">
+      <img src="../assets/img/GitHub-Mark-32px.png" alt="WigeDev GitHub" />
+    </a>
   </mat-toolbar>
 </footer>

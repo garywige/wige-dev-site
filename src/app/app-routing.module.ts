@@ -6,7 +6,7 @@ import { DownloadsComponent } from './downloads/downloads.component'
 import { HomeComponent } from './home/home.component'
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'downloads', component: DownloadsComponent },
   { path: 'contact-us', component: ContactUsComponent },
 ]

@@ -1,10 +1,11 @@
 <div fxLayout="column" fxLayoutAlign="start center">
   <h1>Contact Us</h1>
 
-  <div [formGroup]="form" *ngIf="!isSubmitted">
+  <div [formGroup]="form" *ngIf="!isSubmitted" class="form-container">
     <div>
       <mat-form-field>
         <mat-label>Email</mat-label>
+        <mat-icon matSuffix>email</mat-icon>
         <input matInput formControlName="email" required>
         <mat-error>must be a valid email address</mat-error>
       </mat-form-field>
@@ -12,6 +13,7 @@
     <div>
       <mat-form-field>
         <mat-label>Subject</mat-label>
+        <mat-icon matSuffix>lightbulb</mat-icon>
         <input matInput formControlName="subject" required>
         <mat-error>must be more than 2 characters</mat-error>
       </mat-form-field>
@@ -19,6 +21,7 @@
     <div>
       <mat-form-field>
         <mat-label>Message</mat-label>
+        <mat-icon matSuffix>description</mat-icon>
         <textarea matInput formControlName="message" style="height: 4em;"
           required></textarea>
         <mat-error>must be more than 10 characters</mat-error>
@@ -32,8 +35,8 @@
       <button mat-button (click)="onCancel()">Cancel</button>
     </div>
   </div>
-  <div>
-    <mat-spinner color="accent" *ngIf="isSubmitted && output === ''"></mat-spinner>
+  <div class="post-submission" *ngIf="isSubmitted">
+    <mat-spinner color="accent" *ngIf="output === ''"></mat-spinner>
     <p>{{output}}</p>
     <button mat-raised-button routerLink="/" color="accent"
       *ngIf="output !== ''">Home</button>

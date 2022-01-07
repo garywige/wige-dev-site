@@ -1,5 +1,10 @@
 p,
-ul {
+ul,
+mat-divider {
   margin-left: 5%;
   margin-right: 5%;
+}
+
+mat-divider {
+  margin-top: 2em;
 }

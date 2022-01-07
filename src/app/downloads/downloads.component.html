@@ -7,7 +7,7 @@
       [ngModel]="search" (ngModelChange)="search = $event">
   </mat-form-field>
 
-  <mat-card class="minheight">
+  <mat-card class="dl-card">
     <dl>
       <ng-container *ngFor="let download of downloads">
         <div *ngIf="download.name.toLowerCase().includes(search.toLowerCase())">
