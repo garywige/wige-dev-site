@@ -25,3 +25,7 @@ The site is composed of 3 pages:
 - [Contact Us](src/app/contact-us)
 
 The main SPA "wrapper" component is the [app component](src/app), which contains the template for the header and footer.
+
+## CI/CD
+
+CircleCI is utilized for CI/CD and you will find the configuration for that in the [.circleci](.circleci) directory in YAML format. When git pushes are made, the repository is staged at [staging.wige-dev.com](https://staging.wige-dev.com) on Vercel. Once code is merged with the main branch, it is automatically pushed to Google Cloud Build to create a new image. As of right now, images need to be manually deployed to production from the Google Cloud Run interface. The current production site can be found [here](https://wige-dev.com).
