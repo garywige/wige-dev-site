@@ -1,6 +1,6 @@
 # App Root
 
-This is the root of the Angular application. The main compoents of the app are:
+This is the root of the Angular application. The main components of the app are:
 
 - [Home](home)
 - [Downloads](downloads)
