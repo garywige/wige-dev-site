@@ -20,8 +20,8 @@ The site is composed of two projects: this project, which represents the fronten
 
 The site is composed of 3 pages:
 
-- [Home]("./src/app/home")
-- [Downloads]("./src/app/downloads")
-- [Contact Us]("./src/app/contact-us")
+- [Home](src/app/home)
+- [Downloads](src/app/downloads)
+- [Contact Us](src/app/contact-us)
 
-The main SPA "wrapper" component is the [app component]("./src/app"), which contains the template for the header and footer.
+The main SPA "wrapper" component is the [app component](src/app), which contains the template for the header and footer.
