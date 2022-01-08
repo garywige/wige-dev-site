@@ -50,4 +50,12 @@ describe('ContactUsComponent', () => {
     expect(component.form.get('subject')?.value).toEqual('')
     expect(component.form.get('message')?.value).toEqual('')
   })
+
+  it('should set isSubmitted to true when onSubmit() is called', () => {
+    // Act
+    component.onSubmit()
+
+    // Assert
+    expect(component.isSubmitted).toEqual(true)
+  })
 })
