@@ -26,10 +26,36 @@ describe('ContactUsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ContactUsComponent)
     component = fixture.componentInstance
+
+    // Arrange
+    component.form.patchValue({
+      email: 'test',
+      subject: 'test',
+      message: 'test',
+    })
+
     fixture.detectChanges()
   })
 
   it('should create', () => {
     expect(component).toBeTruthy()
+  })
+
+  it('should clear form when onCancel() is called', () => {
+    // Act
+    component.onCancel()
+
+    // Assert
+    expect(component.form.get('email')?.value).toEqual('')
+    expect(component.form.get('subject')?.value).toEqual('')
+    expect(component.form.get('message')?.value).toEqual('')
+  })
+
+  it('should set isSubmitted to true when onSubmit() is called', () => {
+    // Act
+    component.onSubmit()
+
+    // Assert
+    expect(component.isSubmitted).toEqual(true)
   })
 })

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http'
 import { Component, OnInit } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { tap } from 'rxjs'
 import { environment } from 'src/environments/environment'
 
 import { IContactUsForm } from './contact-us-form'
@@ -46,20 +47,25 @@ export class ContactUsComponent implements OnInit {
     } as IContactUsForm
 
     const url = environment.api_url + '/v1/contactus'
-    this.http.post<IContactUsForm>(url, data).subscribe((result) => {
-      if (result.email) {
-        // email was sent successfully
-        this.output = `
+    this.http
+      .post<IContactUsForm>(url, data)
+      .pipe(
+        tap((result) => {
+          if (result.email) {
+            // email was sent successfully
+            this.output = `
           Message with subject '${result.message}' was sent. Have a nice day!
         `
-      } else {
-        // there was an error
-        this.output = `
+          } else {
+            // there was an error
+            this.output = `
           Error:
           ${result.message}
         `
-      }
-    })
+          }
+        })
+      )
+      .subscribe()
 
     this.isSubmitted = true
   }
