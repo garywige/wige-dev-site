@@ -2,9 +2,10 @@
   <h1>Downloads</h1>
 
   <mat-form-field>
+    <mat-label>search downloads</mat-label>
     <mat-icon matPrefix>search</mat-icon>
-    <input matInput type="search" placeholder="search downloads..." class="search-input"
-      [ngModel]="search" (ngModelChange)="search = $event">
+    <input matInput type="search" class="search-input" [ngModel]="search"
+      (ngModelChange)="search = $event">
   </mat-form-field>
 
   <mat-card class="dl-card">

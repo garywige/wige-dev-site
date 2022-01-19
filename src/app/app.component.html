@@ -13,7 +13,8 @@
       Contact Us
     </button>
   </span>
-  <button mat-icon-button [matMenuTriggerFor]="menu" fxHide fxShow.lt-sm="true">
+  <button mat-icon-button [matMenuTriggerFor]="menu" fxHide fxShow.lt-sm="true"
+    aria-label="menu">
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu" overlapTrigger="true">
