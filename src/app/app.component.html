@@ -14,7 +14,7 @@
     </button>
   </span>
   <button mat-icon-button [matMenuTriggerFor]="menu" fxHide fxShow.lt-sm="true">
-    <mat-icon>menu</mat-icon>
+    <mat-icon aria-label="menu">menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu" overlapTrigger="true">
     <button mat-menu-item [routerLink]="['']" routerLinkActive="active-link"
