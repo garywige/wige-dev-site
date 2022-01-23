@@ -15,7 +15,7 @@ import { MaterialModule } from './material/material.module'
 @NgModule({
   declarations: [AppComponent, HomeComponent, DownloadsComponent, ContactUsComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
