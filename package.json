@@ -1,6 +1,6 @@
 {
   "name": "wige-dev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 5000 --configuration development",
