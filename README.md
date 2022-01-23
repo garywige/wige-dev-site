@@ -9,6 +9,8 @@ The site is composed of two projects: this project, which represents the fronten
 - `npm run start`: runs the site at http://localhost:5000 in development mode
 - `npm run build`: builds the project
 - `npm run build:prod`: build the project for production
+- `npm run docker:build`: build docker container tagged as 'garywige/wige-dev-site'
+- `npm run docker:run`: run the latest built docker image
 - `npm run test`: runs jasmine unit tests
 - `npm run test:nowatch`: runs tests with the --watch=false flag. This is primarily for CI/CD
 - `npm run style`: runs import-sort & prettier to keep code easy to read
