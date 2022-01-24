@@ -15,4 +15,8 @@ RUN npm install
 # Generate the build of the application
 RUN npm run build:prod
 
+ENV HOST "0.0.0.0"
+ENV PORT 4000
+EXPOSE 4000
+
 CMD ["node", "/usr/local/app/dist/Wige-Dev/server/main.js"]
