@@ -13,7 +13,7 @@ COPY ./ /usr/local/app/
 RUN npm install
 
 # Generate the build of the application
-RUN npm run build:prod
+RUN npm run build:ssr
 
 ENV HOST "0.0.0.0"
 ENV PORT 4000
